@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--
+
+<AnchorPane id="AnchorPane" prefHeight="777.0" prefWidth="860.0" xmlns:fx="http://javafx.com/fxml" fx:controller="screensframework.Screen4Controller">
+   <children>
+      <HBox layoutY="10.0" prefHeight="47.0" prefWidth="860.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#goToScreen1" prefHeight="47.0" prefWidth="170.0" text="CONSOLE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#goToScreen2" prefHeight="47.0" prefWidth="180.0" text="ACTION ITEMS">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#goToScreen3" prefHeight="47.0" prefWidth="170.0" text="MEMBERS">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="" prefHeight="47.0" prefWidth="170.0" text="TEAMS">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false"  prefHeight="47.0" prefWidth="170.0" text="QUIT">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <TextField alignment="CENTER" editable="false" layoutY="47.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="39.0" prefWidth="860.0" text="TEAMS" AnchorPane.leftAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <VBox layoutY="106.0" prefHeight="671.0" prefWidth="320.0" spacing="10.0">
+         <children>
+            <Label layoutY="108.0" prefHeight="25.0" prefWidth="170.0" text="Name of a new team">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField layoutY="133.0" />
+            <Label layoutY="185.0" prefHeight="25.0" prefWidth="258.0" text="To add a name to the list:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="219.0" prefHeight="21.0" prefWidth="225.0" text="1. Click on the box above." />
+            <Label layoutX="17.0" layoutY="251.0" prefHeight="21.0" prefWidth="225.0" text="2. Type the name." />
+            <Label layoutX="13.0" layoutY="279.0" prefHeight="21.0" prefWidth="225.0" text="3. Click the &quot;Add to List&quot; button." />
+            <Label layoutX="12.0" layoutY="321.0" prefHeight="25.0" prefWidth="316.0" text="To remove a name from the list:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="353.0" prefHeight="21.0" prefWidth="225.0" text="1. Click on the name to remove." />
+            <Label layoutX="17.0" layoutY="391.0" prefHeight="21.0" prefWidth="264.0" text="2. Click on &quot;Remove from List&quot; button." />
+            <Label layoutX="9.0" layoutY="433.0" prefHeight="25.0" prefWidth="323.0" text="To add a member association for a team:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="474.0" prefHeight="21.0" prefWidth="316.0" text="1. Click on the name of the team above right." />
+            <Label layoutX="17.0" layoutY="515.0" prefHeight="21.0" prefWidth="316.0" text="2. Click on a member name in the list below." />
+            <Label layoutX="23.0" layoutY="536.0" prefHeight="21.0" prefWidth="264.0" text="3. Click on &quot;Add association&quot; button." />
+            <Label layoutX="14.0" layoutY="585.0" prefHeight="25.0" prefWidth="258.0" text="Available members for team">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="21.0" prefWidth="98.0" text="label" />
+            <TextArea layoutX="9.0" layoutY="625.0" prefHeight="173.0" prefWidth="320.0" />
+         </children>
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="532.0" layoutY="106.0" prefHeight="225.0" prefWidth="320.0" spacing="10.0">
+         <children>
+            <Label layoutX="568.0" layoutY="106.0" prefHeight="25.0" prefWidth="170.0" text="Teams known by Della">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextArea prefHeight="173.0" prefWidth="304.0" />
+         </children>
+         <padding>
+            <Insets left="1.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="513.0" layoutY="331.0" spacing="10.0">
+         <children>
+            <Label layoutX="505.0" layoutY="312.0" prefHeight="25.0" prefWidth="350.0" text="To remove a member association for a team:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="522.0" layoutY="342.0" prefHeight="21.0" prefWidth="282.0" text="1. Click on the name of the team above." />
+            <Label layoutX="522.0" layoutY="374.0" prefHeight="21.0" prefWidth="306.0" text="2. Click on a member name in the list below." />
+            <Label layoutX="522.0" layoutY="405.0" prefHeight="21.0" prefWidth="282.0" text="3. Click on &quot;Remove association&quot; button." />
+         </children>
+      </VBox>
+      <VBox layoutX="532.0" layoutY="534.0" prefHeight="241.0" prefWidth="320.0" spacing="10.0">
+         <children>
+            <Label layoutX="583.0" layoutY="459.0" prefHeight="25.0" prefWidth="225.0" text="Current members for team">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="589.0" layoutY="484.0" text="Label" />
+            <TextArea layoutX="591.0" layoutY="512.0" prefHeight="173.0" prefWidth="326.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="309.0" layoutY="253.0" prefHeight="50.0" prefWidth="246.0">
+         <children>
+            <Label layoutX="224.0" layoutY="262.0" prefHeight="25.0" prefWidth="350.0" text="Click on an team's name">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="224.0" layoutY="300.0" prefHeight="25.0" prefWidth="350.0" text="To see member associations.">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button layoutX="337.0" layoutY="145.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="155.0" text="Add to List">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="337.0" layoutY="194.0" mnemonicParsing="false" text="Remove from List">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="337.0" layoutY="603.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="171.0" text="Add association">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="337.0" layoutY="654.0" mnemonicParsing="false" text="Remove association">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
+-->
+
+<AnchorPane id="AnchorPane" prefHeight="777.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.Screen4Controller">
+   <children>
+      <HBox layoutY="10.0" prefHeight="47.0" prefWidth="860.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#goToScreen1" prefHeight="47.0" prefWidth="170.0" text="CONSOLE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#goToScreen2" prefHeight="47.0" prefWidth="180.0" text="ACTION ITEMS">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#goToScreen3" prefHeight="47.0" prefWidth="170.0" text="MEMBERS">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#goToScreen4" prefHeight="47.0" prefWidth="170.0" text="TEAMS">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#onChangeQuit" prefHeight="47.0" prefWidth="170.0" text="QUIT">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <TextField alignment="CENTER" editable="false" layoutY="47.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="39.0" prefWidth="860.0" text="TEAMS" AnchorPane.leftAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="2.0" layoutY="345.0" prefHeight="21.0" prefWidth="225.0" text="1. Click on the name to remove." />
+      <Label layoutX="2.0" layoutY="217.0" prefHeight="21.0" prefWidth="225.0" text="1. Click on the box above." />
+      <Label layoutX="2.0" layoutY="376.0" prefHeight="21.0" prefWidth="264.0" text="2. Click on &quot;Remove from List&quot; button." />
+      <Label layoutX="2.0" layoutY="310.0" prefHeight="25.0" prefWidth="316.0" text="To remove a name from the list:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="182.0" prefHeight="25.0" prefWidth="258.0" text="To add a name to the list:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="473.0" prefHeight="21.0" prefWidth="316.0" text="2. Click on a member name in the list below." />
+      <Label layoutX="2.0" layoutY="106.0" prefHeight="25.0" prefWidth="317.0" text="Name of a new team">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="2.0" layoutY="141.0" onMouseClicked="#setAddToList" />
+      <Label layoutX="2.0" layoutY="279.0" prefHeight="21.0" prefWidth="225.0" text="3. Click the &quot;Add to List&quot; button." />
+      <Label layoutX="2.0" layoutY="248.0" prefHeight="21.0" prefWidth="225.0" text="2. Type the name." />
+      <Label layoutX="2.0" layoutY="504.0" prefHeight="21.0" prefWidth="264.0" text="3. Click on &quot;Add association&quot; button." />
+      <Label layoutX="2.0" layoutY="407.0" prefHeight="25.0" prefWidth="327.0" text="To add a member association for an team:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="442.0" prefHeight="21.0" prefWidth="339.0" text="1. Click on the name of the team above right." />
+      <VBox layoutX="532.0" layoutY="106.0" prefHeight="248.0" prefWidth="327.0" spacing="10.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label layoutX="568.0" layoutY="106.0" prefHeight="25.0" prefWidth="222.0" text="Teams known by Della">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Circle fx:id="circle" fill="#46ff21" radius="14.0" stroke="BLACK" strokeType="INSIDE">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Circle>
+               </children>
+            </HBox>
+            <ListView fx:id="teamsAll" onMouseClicked="#setFields" prefHeight="213.0" prefWidth="319.0" />
+         </children>
+         <padding>
+            <Insets left="1.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="513.0" layoutY="381.0" prefHeight="127.0" prefWidth="350.0" spacing="10.0">
+         <children>
+            <Label layoutX="505.0" layoutY="312.0" prefHeight="25.0" prefWidth="350.0" text="To remove a member association for a team:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="522.0" layoutY="342.0" prefHeight="21.0" prefWidth="342.0" text="1. Click on the name of the team above." />
+            <Label layoutX="522.0" layoutY="374.0" prefHeight="21.0" prefWidth="306.0" text="2. Click on a member name in the list below." />
+            <Label layoutX="522.0" layoutY="405.0" prefHeight="21.0" prefWidth="282.0" text="3. Click on &quot;Remove association&quot; button." />
+         </children>
+      </VBox>
+      <VBox layoutX="532.0" layoutY="534.0" prefHeight="256.0" prefWidth="327.0" spacing="10.0">
+         <children>
+            <Label layoutX="583.0" layoutY="459.0" prefHeight="25.0" prefWidth="225.0" text="Current members for team">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="tmName" layoutX="589.0" layoutY="484.0" />
+            <ListView fx:id="currentMembers" onMouseClicked="#setRemoveAssociation" prefHeight="188.0" prefWidth="320.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="309.0" layoutY="253.0" prefHeight="50.0" prefWidth="246.0">
+         <children>
+            <Label layoutX="224.0" layoutY="262.0" prefHeight="25.0" prefWidth="350.0" text="Click on an team's name">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="224.0" layoutY="300.0" prefHeight="25.0" prefWidth="350.0" text="To see member associations.">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="addToList" layoutX="337.0" layoutY="145.0" mnemonicParsing="false" onAction="#addList" prefHeight="38.0" prefWidth="155.0" text="Add to List">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeFromList" layoutX="337.0" layoutY="194.0" mnemonicParsing="false" onAction="#removeList" text="Remove from List">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="addAssociation" layoutX="337.0" layoutY="603.0" mnemonicParsing="false" onAction="#addAssociation" prefHeight="37.0" prefWidth="171.0" text="Add association">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeAssociation" layoutX="337.0" layoutY="654.0" mnemonicParsing="false" onAction="#removeAssociation" text="Remove association">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <VBox layoutX="8.0" layoutY="534.0" prefHeight="256.0" prefWidth="327.0" spacing="10.0" AnchorPane.leftAnchor="1.0">
+         <children>
+            <Label layoutX="583.0" layoutY="459.0" prefHeight="25.0" prefWidth="225.0" text="Available members for team">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="tName" layoutX="589.0" layoutY="484.0" />
+            <ListView fx:id="allMembers" onMouseClicked="#setAddAssociations" prefHeight="188.0" prefWidth="320.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

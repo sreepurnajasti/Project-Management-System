@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" prefHeight="792.0" prefWidth="850.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.Screen2Controller">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="740.0" prefWidth="850.0">
+          <children>
+            <VBox layoutY="48.0" prefHeight="721.0" prefWidth="850.0" spacing="20.0">
+               <children>
+                  <TextField alignment="CENTER" editable="false" layoutX="670.0" layoutY="6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="ACTION ITEMS" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </TextField>
+                  <VBox spacing="10.0">
+                     <children>
+                        <VBox spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Action Items:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Circle fx:id="circle" fill="#46ff21" radius="14.0" stroke="BLACK" strokeType="INSIDE">
+                                       <HBox.margin>
+                                          <Insets left="720.0" />
+                                       </HBox.margin>
+                                    </Circle>
+                                 </children>
+                              </HBox>
+                              <ComboBox fx:id="aActionItems" layoutY="21.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#selectActionItem" prefWidth="353.0" />
+                              <Label text="Select an Action Item from Pull-Down List above to examine and update it." textFill="#83078f">
+                                 <font>
+                                    <Font name="System Italic" size="14.0" />
+                                 </font></Label>
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </VBox>
+                        <HBox layoutY="103.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" AnchorPane.leftAnchor="0.0">
+                           <children>
+                              <VBox layoutY="103.0" prefHeight="62.0" prefWidth="202.0" spacing="10.0">
+                                 <children>
+                                    <Label layoutY="103.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="190.0" text="Inclusion Factor:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                    <ComboBox fx:id="inclusionFactor" layoutY="124.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#sorting" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutY="164.0" prefHeight="66.0" prefWidth="208.0" spacing="10.0">
+                                 <children>
+                                    <Label layoutY="103.0" text="Sorting Direction:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                    <ComboBox fx:id="sortingDirection" layoutY="124.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#sorting" prefWidth="158.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutY="233.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="66.0" prefWidth="207.0" spacing="10.0">
+                                 <children>
+                                    <Label layoutY="103.0" text="First Sorting Factor:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                    <ComboBox fx:id="firstSortingFactor" layoutY="124.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#sorting" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutY="309.0" prefHeight="62.0" prefWidth="202.0" spacing="10.0">
+                                 <children>
+                                    <Label layoutY="103.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Second Sorting Factor:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                    <ComboBox fx:id="secondSortingFactor" layoutY="124.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#sorting" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox layoutY="195.0" prefHeight="453.0" prefWidth="850.0" spacing="20.0">
+                     <children>
+                        <VBox layoutY="195.0" prefHeight="372.0" prefWidth="426.0" spacing="10.0" AnchorPane.leftAnchor="0.0">
+                           <children>
+                              <Label text="Selected Action Item:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font></Label>
+                              <HBox layoutY="6.0">
+                                 <children>
+                                    <Label layoutY="11.0" text="Name: " />
+                                    <TextField fx:id="aName" layoutX="44.0" layoutY="6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="31.0" prefWidth="305.0" />
+                                 </children>
+                              </HBox>
+                              <VBox layoutY="50.0" spacing="10.0">
+                                 <children>
+                                    <Label layoutY="50.0" text="Description:" />
+                                    <TextArea fx:id="aDescription" layoutY="71.0" prefHeight="153.0" prefWidth="426.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutY="197.0" spacing="10.0">
+                                 <children>
+                                    <Label layoutY="197.0" text="Resolution:" />
+                                    <TextArea fx:id="aResolution" layoutY="218.0" prefHeight="153.0" prefWidth="426.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="442.0" layoutY="246.0" prefHeight="372.0" prefWidth="373.0" spacing="10.0">
+                           <children>
+                              <VBox alignment="BOTTOM_LEFT" layoutX="471.0" layoutY="246.0" spacing="10.0">
+                                 <children>
+                                    <Label layoutX="587.0" layoutY="246.0" text="Dates:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                    <VBox layoutX="471.0" layoutY="299.0" prefHeight="113.0" prefWidth="363.0" spacing="10.0">
+                                       <children>
+                                          <HBox spacing="10.0">
+                                             <children>
+                                                <VBox alignment="TOP_RIGHT" spacing="10.0">
+                                                   <children>
+                                                      <Label layoutX="638.0" layoutY="299.0" text="Creation:" />
+                                                      <Label layoutX="644.0" layoutY="333.0" text="Due:" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox spacing="10.0">
+                                                   <children>
+                                                      <Label fx:id="aCurrentDate" layoutX="698.0" layoutY="299.0" text="    " />
+                                                      <TextField fx:id="aDue" layoutX="675.0" layoutY="328.0" />
+                                                      <Label alignment="CENTER" text="Use YYYY-MM-DD Format" textAlignment="CENTER" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="30.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="442.0" layoutY="390.0" prefHeight="85.0" prefWidth="373.0" spacing="10.0">
+                                 <children>
+                                    <Label layoutX="488.0" layoutY="360.0" text="Action Item:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                    <HBox layoutX="488.0" layoutY="392.0" prefHeight="31.0" prefWidth="220.0" spacing="10.0">
+                                       <children>
+                                          <Label layoutX="488.0" layoutY="397.0" text="Status:" />
+                                          <ComboBox fx:id="status" layoutX="549.0" layoutY="392.0" prefHeight="31.0" prefWidth="157.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets left="45.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="445.0" layoutY="452.0" prefHeight="169.0" prefWidth="373.0" spacing="10.0">
+                                 <children>
+                                    <VBox layoutX="445.0" layoutY="452.0" prefHeight="70.0" prefWidth="373.0" spacing="10.0">
+                                       <children>
+                                          <Label layoutY="103.0" text="Assigned To Members:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font></Label>
+                                          <ComboBox fx:id="aAssignedMember" layoutY="124.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#setTeamFromMembers" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="445.0" layoutY="525.0" spacing="10.0">
+                                       <children>
+                                          <Label layoutY="103.0" text="Assigned To Teams:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font></Label>
+                                          <ComboBox fx:id="aAssignedTeam" layoutY="124.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#setMembersFromTeam" />
+                                       </children>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="87.0" layoutY="650.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="update" layoutX="211.0" layoutY="701.0" mnemonicParsing="false" onAction="#updateActionItem" prefHeight="37.0" prefWidth="230.0" text="Update This Action Item">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></Button>
+                        <Button fx:id="clear" layoutX="449.0" layoutY="692.0" mnemonicParsing="false" onAction="#clearThisForm" prefHeight="37.0" prefWidth="181.0" text="Clear This Form">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></Button>
+                        <Button fx:id="create" layoutY="707.0" mnemonicParsing="false" onAction="#CreateActionItem" prefHeight="37.0" prefWidth="223.0" text="Create A New Action Item">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></Button>
+                        <Button fx:id="delete" layoutX="583.0" layoutY="639.0" mnemonicParsing="false" onAction="#deleteActionItem" prefHeight="37.0" prefWidth="208.0" text="Delete This Action Item" textAlignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label layoutX="-3.0" />
+            <HBox>
+               <children>
+                  <Button defaultButton="true" layoutY="5.0" mnemonicParsing="false" onAction="#goToScreen1" onMouseClicked="#actionItemsList" prefHeight="47.0" prefWidth="170.0" text="CONSOLE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="207.0" layoutY="3.0" mnemonicParsing="false" onAction="#goToScreen2" prefHeight="47.0" prefWidth="170.0" text="ACTION ITEMS">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="394.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToScreen3" prefHeight="47.0" prefWidth="170.0" text="MEMBERS">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="509.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToScreen4" prefHeight="47.0" prefWidth="170.0" text="TEAMS">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="629.0" layoutY="11.0" mnemonicParsing="false" onAction="#onChangeQuit" prefHeight="47.0" prefWidth="170.0" text="QUIT">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+          </children>
+      </AnchorPane>
+   </children>
+</HBox>
